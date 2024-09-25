@@ -5,16 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Journey Activity</title>
     <link rel="stylesheet" href="./ui/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/locale/pt-br.js"></script>
+    <script>
+      dayjs.locale("pt-br");
+    </script>
   </head>
-  <body>
-    <h1>Atividades</h1>
 
-    <section>
+  <body>
+    <form onsubmit="salvarAtividade(event)">
       <div>
-        <input type="checkbox" />
-        <span>Academia em grupo</span>
-        <time>sábado, 18 de abril às 08:00h</time>
+        <input
+          type="text"
+          placeholder="Qual a atividade?"
+          name="atividade"
+          required
+        />
       </div>
-    </section>
+
+      <div>
+        <select name="dia">
+          <option value="2024-03-01">01 de fevereiro</option>
+        </select>
+      </div>
+
+      <div>
+        <select name="hora">
+          <option value="10:30">10:30</option>
+        </select>
+      </div>
+
+      <button>Salvar atividade</button>
+    </form>
+    <main>
+      <h1>Atividades</h1>
+      <section></section>
+    </main>
   </body>
 </html>
